@@ -1,0 +1,50 @@
+{
+  "defaultMapId": "Age",
+  "taxonomies": {
+    "sustainability":  "taxonomy-sustainability.json"
+  },
+  "maps": {
+    "Age": {
+      "title": "Sustainability Ecosystem",
+      "shortName": "Age",
+      "center": [
+        12.4,
+        55.6
+      ],
+      "flyTo": [
+        10.5,
+        56.3
+      ],
+      "flyToZoom": 1,
+      "taxonomy": "sustainability"
+    },
+    "Sex": {
+      "title": "Sustainability Ecosystem ",
+      "shortName": "Sex",
+      "center": [
+        12.4,
+        55.6
+      ],
+      "flyTo": [
+        10.5,
+        56.3
+      ],
+      "flyToZoom": 1,
+      "taxonomy": "sustainability"
+    },
+    "Profit": {
+      "title": "Sustainability Ecosystem  ",
+      "shortName": "Profit",
+      "center": [
+        12.4,
+        55.6
+      ],
+      "flyTo": [
+        10.5,
+        56.3
+      ],
+      "flyToZoom": 1,
+      "taxonomy": "sustainability"
+    }
+  }
+}

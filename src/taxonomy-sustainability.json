@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Female",
+    "color": "#FFC0CB",
+    "aliases": [ "Female" ]
+  },
+  {
+    "name": "For-Profit",
+    "color": "#c30",
+    "aliases": [ "For-Profit" ]
+  },
+  {
+    "name": "Male",
+    "color": "#0000FF",
+    "aliases": [ "Male" ]
+  },
+  {
+    "name": "Non-Profit",
+    "color": "#07a4bc",
+    "aliases": [ "Non-Profit", "Non-profit" ]
+  },
+  {
+    "name": "Over 30",
+    "color": "#FFFF00",
+    "aliases": [ "Over 30" ]
+  },
+  {
+    "name": "Under 30",
+    "color": "#FFA500",
+    "aliases": [ "Under 30" ]
+  }
+]
