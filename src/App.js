@@ -8,7 +8,6 @@ import LogoOverlay from './LogoOverlay';
 import IconButton from '@material-ui/core/Button';
 import { Home } from '@material-ui/icons';  
 import Omnibox from './Omnibox';
-import SettingsPane from './SettingsPane';
 import { getAllCategories } from './common';
 import CONFIG from './config.json';
 import { fetchMapData } from './data-loader';
@@ -28,18 +27,14 @@ function getPopupContent(props) {
   const categoryInfo = ['tax1', 'tax2', 'tax3']
     .map(k => props[k])
     .filter(s => s).join(" | ");
-  var extraNotes = "";
-  if (props.hasOwnProperty("notes") && props["notes"] !== "") {
-    extraNotes = `<span>${props['notes']}</span><br />`;
-  }
   return `
     <div class="popup" style = "color: 626262">
       <h3 class="company-name">
         <a href=${props['website']} style="color: 02346d" target="blank">${props['company']}</a>
       </h3>
-      Focus: <span class="category-info">${categoryInfo}</span><br />
+      
       City: <span class="city-info">${props['city']}</span><br />
-      ${extraNotes}
+
     </div>`;
 }
 
@@ -70,10 +65,6 @@ function populateMapData(map, mapId, mapData) {
       data: data['geojson'],
     });
 
-    // Last entry is fallthrough color
-    let circleColors =
-      data['taxonomy'].map(c => [c.name, c.color]).flat().concat(['#ccc']);
-
     map.addLayer({
       id: POINT_LAYER,
       type: 'circle',
@@ -85,7 +76,7 @@ function populateMapData(map, mapId, mapData) {
         },
         'circle-opacity': 0.85,
         // color circles by primary category
-        'circle-color': ['match', ['get', 'tax1']].concat(circleColors),
+        'circle-color': '#79DDF2',
         'circle-stroke-color': '#000',
         'circle-stroke-width': 0.4,
       }
@@ -207,25 +198,10 @@ export default function App() {
   const [selectedCategories, setSelectedCategories] = useState(new Set([]));
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
 
-
-  function handleToggleCategory(e) {
-    var s = new Set(selectedCategories);
-    if (s.has(e.target.name)) {
-      s.delete(e.target.name);
-    } else {
-      s.add(e.target.name);
-    }
-    setSelectedCategories(s);
-  }
-
   function handleSelectAllCategories(txnomy) {
     // takes argument instead of using taxonomy directly because taxonomy
     // state update can lag behind
     setSelectedCategories(getAllCategories(txnomy));
-  }
-
-  function handleDeselectAllCategories() {
-    setSelectedCategories(new Set());
   }
 
   function handleSelectCompany(e) {
@@ -315,16 +291,6 @@ export default function App() {
   return (
     <ThemeProvider theme={THEME}>
       <div className={classes.root}>
-        <SettingsPane
-          selectedMapId={selectedMapId}
-          mobileDrawerOpen={mobileDrawerOpen}
-          selectedCategories={selectedCategories}
-          onToggleOpen={setMobileDrawerOpen}
-          onSelectMap={handleSelectMap}
-          taxonomy={taxonomy}
-          onSelectAllCategories={() => handleSelectAllCategories(taxonomy)}
-          onDeselectAllCategories={handleDeselectAllCategories}
-          onToggleCategory={handleToggleCategory} />
         <main className={classes.mainContent}>
           <div id="map-container" className={classes.mapContainer} />
           <div className={classes.resetViewButton} >
