@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/aes-sustainability/static/css/main.de053e25.chunk.css",
+    "main.js": "/aes-sustainability/static/js/main.0de288da.chunk.js",
+    "main.js.map": "/aes-sustainability/static/js/main.0de288da.chunk.js.map",
+    "runtime-main.js": "/aes-sustainability/static/js/runtime-main.b8cedae0.js",
+    "runtime-main.js.map": "/aes-sustainability/static/js/runtime-main.b8cedae0.js.map",
+    "static/js/2.ebec581e.chunk.js": "/aes-sustainability/static/js/2.ebec581e.chunk.js",
+    "static/js/2.ebec581e.chunk.js.map": "/aes-sustainability/static/js/2.ebec581e.chunk.js.map",
+    "index.html": "/aes-sustainability/index.html",
+    "static/css/main.de053e25.chunk.css.map": "/aes-sustainability/static/css/main.de053e25.chunk.css.map",
+    "static/js/2.ebec581e.chunk.js.LICENSE.txt": "/aes-sustainability/static/js/2.ebec581e.chunk.js.LICENSE.txt",
+    "static/media/insight-white.fb6662a9.png": "/aes-sustainability/static/media/insight-white.fb6662a9.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b8cedae0.js",
+    "static/js/2.ebec581e.chunk.js",
+    "static/css/main.de053e25.chunk.css",
+    "static/js/main.0de288da.chunk.js"
+  ]
+}
