@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import aesLogoWhite from './img/aes-logo-white-shadow.png';
+import honeywell from './img/honeywell-white.png';
 import CONFIG from './config.json';
 
 
@@ -23,6 +24,10 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     fontSize: "9pt",
   },
+  honeywellLogo: {
+    padding: 0,
+    height: 50,
+  },
 }));
 
 
@@ -33,6 +38,9 @@ export default function LogoOverlay(props) {
   // 2020-09-08: Stanford requested removal of logo in favor of explanatory
   // text. Can be re-added at some point in the future.
   var suLogoDisplay = map['displayStanfordLogo'] ? 'block' : 'none'
+  var hwLogoDisplay = map['displayHoneywellLogo'] ? 'block' : 'none'
+
+
 
   return (
     <div className={classes.root}>
@@ -43,6 +51,15 @@ export default function LogoOverlay(props) {
         Precourt Family Professor at Stanford University, and Scott Jespersen,
         MS '20, Stanford.
       </div>
+      <div className={classes.honeywellLogoContainer}
+         style={{display: hwLogoDisplay}}>
+         <a href="https://www.honeywell.com/us/en" target="_blank" rel="noopener noreferrer">
+           <img
+             src={honeywell}
+             className={classes.honeywellLogo}
+             alt="Honeywell Logo" />
+         </a>
+       </div>
       <div className={classes.aesLogoContainer}>
         <img
           src={aesLogoWhite}
