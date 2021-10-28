@@ -22,6 +22,12 @@ body {
   padding: 0;
   overflow: hidden;
 }
+a {
+  color:#02346d;
+}
+a:active, a:visited {
+  color:#636;
+}
 .mapboxgl-popup-content > .popup > * {
   margin: 0;
 }
