@@ -2,7 +2,7 @@
   "name": "aes-test",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://laurenjanicke.github.io/aes-sustainability/",
+  "homepage": "http://sustainabilitymap.energysociety.org/",
   "dependencies": {
     "@material-ui/core": "^4.10.2",
     "@material-ui/icons": "^4.9.1",
