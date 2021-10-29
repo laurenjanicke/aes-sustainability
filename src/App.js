@@ -293,6 +293,7 @@ export default function App() {
       <div className={classes.root}>
         <main className={classes.mainContent}>
           <div id="map-container" className={classes.mapContainer} />
+          <LogoOverlay selectedMapId={selectedMapId} />
           <div className={classes.resetViewButton} >
             <IconButton variant="contained" color="white" className={classes.resetViewButton} aria-label="reset view" onClick={() => { handleReset() }} >
               <Home />
