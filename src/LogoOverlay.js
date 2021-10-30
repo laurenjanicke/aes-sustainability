@@ -53,7 +53,7 @@ export default function LogoOverlay(props) {
       </div>
       <div className={classes.honeywellLogoContainer}
          style={{display: hwLogoDisplay}}>
-         <a href="https://www.honeywell.com/us/en" target="_blank" rel="noopener noreferrer">
+         <a href="https://www.honeywell.com/us/en/company/sustainability" target="_blank" rel="noopener noreferrer">
            <img
              src={honeywell}
              className={classes.honeywellLogo}
